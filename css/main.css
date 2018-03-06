@@ -1,0 +1,202 @@
+.wrap {
+    overflow: hidden;
+    width: 100%;
+    min-width: 1024px;
+}
+
+.header {
+    width: 100%;
+    min-width: 1024px;
+    background: url(../img/header.png) no-repeat center;
+    height: 603px;
+}
+
+.header .logoDiv {
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    right: 244px;
+    width: 95px;
+    height: 95px;
+    border-radius: 25px;
+}
+
+.logoCome {
+    position: absolute;
+    display: block;
+    width: 95px;
+    height: 95px;
+}
+
+.logoCome:hover {
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+    cursor: pointer;
+    background: #ffffff;
+}
+
+.flash_box {
+    position: absolute;
+    right: 0;
+    left: 50%;
+    top: 0;
+    margin-left: -78px;
+}
+
+.main {
+    width: 100%;
+    min-width: 1024px;
+    background: url(../img/main_bg.png) no-repeat center;
+    height: 510px;
+}
+
+.download_box {
+    background: url("../img/down_bg.png") no-repeat;
+    width: 463px;
+    height: 163px;
+    margin: 0 auto;
+    padding: 2px;
+    position: relative;
+    top: 50%;
+    right: 320px;
+}
+
+.loadBox {
+    padding: 30px 10px;
+}
+
+.download_box li {
+    float: left;
+}
+
+.download_box li.down {
+    margin-left: 10px;
+}
+
+.download_box li a {
+    padding: 3px
+}
+
+.download_box li a.google {
+    background: url("../img/google_download.png") no-repeat;
+    display: block;
+    width: 190px;
+    height: 54px;
+}
+
+.download_box li a.google:hover {
+    cursor: pointer;
+    background: url("../img/google_download_hover.png") no-repeat;
+}
+
+.download_box li a.ios {
+    background: url("../img/app_download.png") no-repeat;
+    display: block;
+    width: 190px;
+    height: 54px;
+}
+
+.download_box li a.ios:hover {
+    cursor: pointer;
+    background: url("../img/app_download_hover.png") no-repeat;
+}
+
+.download_box li a.android {
+    background: url("../img/apk_download.png") no-repeat;
+    display: block;
+    width: 117px;
+    height: 115px
+}
+
+.download_box li a.android:hover {
+    cursor: pointer;
+    background: url("../img/apk_download_hover.png") no-repeat;
+}
+
+/*videoBox*/
+.main_content {
+    min-width: 1100px;
+    width: 1100px;
+    margin: 0px auto;
+    padding-top: 10px;
+}
+
+.video {
+    background: url("../img/video_background.png") no-repeat;
+    width: 466px;
+    height: 293px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+}
+
+.btnBox .video_btn {
+    position: absolute;
+    background: url("../img/playBtn.png") no-repeat;
+    width: 111px;
+    height: 112px;
+    top: 85px;
+    left: 36%;
+    display: none;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+}
+
+.video_btn:hover {
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.video_box {
+    width: 466px;
+    height: 293px;
+}
+
+.fan_box {
+    overflow: hidden;
+    width: 720px;
+    /*margin-left: 5px;*/
+
+}
+
+.pic-main {
+    overflow: hidden;
+    float: right;
+    margin-right:15px;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.pic-main li {
+    float: left;
+    position: relative;
+    width: 80px;
+    height: 293px;
+    overflow: visible!important;
+    padding: 0 1px;
+}
+
+.pic-main li .img2 img {
+    width: 370px;
+    height: 293px;
+    display: block;
+}
+
+.pic-main li .img1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    -ms-filter: 'alpha(Opacity= 100)';
+    filter: alpha(Opacity=100);
+}
+

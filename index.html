@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="../common/reset.css" type="text/css" rel="stylesheet">
+    <link href="js/video-js.css">
+    <title></title>
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <div class="logoDiv">
+            <a href="http://wsgth.pocketgamesol.com" target="_blank" class="logoCome"></a>
+        </div>
+        <div class="flash_box">
+            <object type="application/x-shockwave-flash"
+                    data="img/flash.swf"
+                    width="1038" height="603" id="flash1">
+                <param name="movie" value="swf/flash.swf"/>
+                <param name="allowFullScreen" value="true"/>
+                <param name="wmode" value="opaque"/>
+                <param name="FlashVars" value="xml=swf/vcastr.xml"/>
+                <embed wmode=”opaque”>
+            </object>
+        </div>
+        <div class="download_box">
+            <ul class="loadBox">
+                <li><img src="img/erweima.png"></li>
+                <li class="down">
+                    <a class="ios" href="http://res-pkg-cdn.pocketgamesol.com/WSGTH/WSGTHiOS.ipa" target="_blank"></a>
+                    <a class="google" href="https://play.google.com/store/apps/details?id=com.pocketgames.wsgth"
+                       target="_blank"></a>
+                </li>
+                <li>
+                    <a class="android" href="http://res-pkg-cdn.pocketgamesol.com/WSGTH/WSGTH.apk" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_content">
+            <div class="video">
+                <div class="btnBox"><a href="javascript:;" class="video_btn"></a></div>
+                <div class="videoContent">
+                    <video class="video_box" id="play_video" controls="controls" autoplay="autoplay">
+                        <source src="media/Warship_girl.mp4" type="video/mp4">
+                        <source src="media/video.webm" type="video/webm">
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a web browser that
+                            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5
+                                video</a>
+                        </p>
+                    </video>
+                </div>
+            </div>
+            <div id="fan_box">
+                <ul class="pic-main">
+                    <li class="s1" style="width: 370px; overflow: hidden;">
+                        <div class="img1" style="opacity: 0;">
+                            <img src="img/p1.jpg">
+                        </div>
+                        <div class="img2" style="opacity: 1;">
+                            <img src="img/showPic1.jpg">
+                        </div>
+                    </li>
+                    <li class="s2">
+                        <div class="img1">
+                            <img src="img/p2.jpg">
+                        </div>
+                        <div class="img2">
+                            <img src="img/showPic2.jpg">
+                        </div>
+                    </li>
+                    <li class="s3">
+                        <div class="img1">
+                            <img src="img/p3.jpg">
+                        </div>
+                        <div class="img2">
+                            <img src="img/showPic3.jpg">
+                        </div>
+                    </li>
+                    <li class="s4" style="border:0">
+                        <div class="img1">
+                            <img src="img/p4.jpg">
+                        </div>
+                        <div class="img2">
+                            <img src="img/showPic4.jpg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1257532114'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257532114%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+document.getElementById("cnzz_stat_icon_1257532114").style.display = "none";
+</script>
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script src="js/swfobject.js"></script>
+<script src="js/video.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".pic-main li:first").addClass("on").animate({
+            width: "370"
+        });
+        $(".pic-main li:first").find(".img1").stop().animate({
+            opacity: 0
+        });
+        $(".pic-main li:first").find(".img2").stop().animate({
+            opacity: 1
+        });
+        $(".pic-main li").hover(function () {
+            $(this).stop().animate({
+                width: "370px"
+            }).siblings().stop().animate({
+                width: "80px"
+            }), $(this).find(".img1").stop().animate({
+                opacity: 0
+            }), $(this).siblings().find(".img1").stop().animate({
+                opacity: 1
+            }), $(this).find(".img2").stop().animate({
+                opacity: 1
+            }), $(this).siblings().find(".img2").stop().animate({
+                opacity: 0
+            })
+        })
+    });
+
+    /**
+     * video视频播放
+     * @type {Element}
+     */
+    var myVideo = document.getElementById('play_video');
+    myVideo.onclick = function () {
+        if (myVideo.paused) {
+            myVideo.play();
+            $(".video_btn").hide();
+        }
+        else {
+            myVideo.pause();
+            $(".video_btn").show();
+        }
+    };
+
+</script>
+</html>
